@@ -6,9 +6,10 @@
 
 <style lang="scss">
 body,
-html {
+html,
+* {
   margin: 0;
   padding: 0;
-  max-width: 1440px;
+  box-sizing: border-box;
 }
 </style>

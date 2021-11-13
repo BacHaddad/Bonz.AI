@@ -6,7 +6,7 @@
 
     <article class="header_text">
       <h1>Bonz.AI</h1>
-      <h2>An AI-Powered Eco-Stay</h2>
+      <p>An AI-Powered Eco-Stay</p>
       <aside></aside>
     </article>
   </header>
@@ -19,20 +19,38 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+@import '@/sass/_variables.scss';
+@import '@/sass/_mixins.scss';
+@import '@/sass/_typography.scss';
 .header {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
+  height: 100%;
+  width: 100%;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/header-image.jpg');
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 110% 110%;
+  background-size: cover;
 
   &_text {
-    position: absolute;
-    top: 13.875rem;
-    left: 10.438rem;
+    color: $white;
+    width: fit-content;
+    margin-top: 20%;
+    margin-left: 15%;
+    text-align: center;
+    p {
+      margin: 1.6rem 0;
+      font-size: $fontSizeHeroText;
+    }
+
+    aside {
+      height: 5px;
+      width: 100%;
+      transform: scale(1.25);
+      transform-origin: center;
+      background-color: $neonBlue;
+    }
   }
 }
 </style>
