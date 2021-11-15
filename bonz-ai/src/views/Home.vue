@@ -112,11 +112,10 @@ export default {
 
   .about {
     background-color: $lightGrey;
-    height: 70vh;
+    min-height: 70vh;
     padding: 130px;
     @include center;
     flex-flow: column wrap;
-    justify-content: space-between;
   }
 
   .rooms-type {
