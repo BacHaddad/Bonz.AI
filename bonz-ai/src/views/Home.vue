@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper">
+  <section>
     <Header />
   </section>
 </template>
@@ -16,10 +16,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.wrapper {
-  max-width: 1440px;
-  height: 100vh;
-  margin: 0 auto;
-}
-</style>
+<style lang="scss"></style>

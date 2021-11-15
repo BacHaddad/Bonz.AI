@@ -2,12 +2,10 @@
 @import 'mixins';
 @import 'typography';
 
-* {
-  box-sizing: border-box;
-}
-
+*,
 body,
 html {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
