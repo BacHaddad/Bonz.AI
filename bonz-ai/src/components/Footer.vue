@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer">
-    <img src="../assets/foter-icons.svg" alt="" />
-  </footer>
+  <section class="footer">
+    <img src="..\assets\footer-icons.svg" alt="" />
+  </section>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <router-link class="brand" to="/"> <img src="..\assets\bonzai-logo.png" alt="" /> </router-link>
+    <router-link class="brand" to="/"> <img src="..\assets\logo.svg" alt="" /> </router-link>
     <router-link class="link" to="/"> About </router-link>
     <router-link class="link" to="/"> Stay </router-link>
     <button class="button">Book</button>

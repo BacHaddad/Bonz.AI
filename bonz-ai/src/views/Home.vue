@@ -16,6 +16,43 @@
       <p>Hello from Bonz.AI 👋 we are thrilled to welcome you to our AI-powered eco-stay at Bohuslän to the north of Gothenburg, Sweden. We believe in offering a personalized stay like none other, by bringing the ultimate contact-less experience to you at your finger tips - on your mobile device. Sit back, relax and let Bonz.AI take care of you.</p>
       <button class="button">Book Now</button>
     </article>
+    <article class="rooms-type">
+      <h2>Select your stay</h2>
+      <div class="rooms">
+        <section class="room-type">
+          <img class="room-type_image" src="..\assets\01-night.jpg" alt="" />
+          <article class="room-type_text">
+            <h3>Type 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
+            <button class="button">Book</button>
+          </article>
+        </section>
+        <section class="room-type">
+          <img class="room-type_image" src="..\assets\03-night.jpg" alt="" />
+          <article class="room-type_text">
+            <h3>Type 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
+            <button class="button">Book</button>
+          </article>
+        </section>
+        <section class="room-type">
+          <img class="room-type_image" src="..\assets\07-night.jpg" alt="" />
+          <article class="room-type_text">
+            <h3>Type 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
+            <button class="button">Book</button>
+          </article>
+        </section>
+        <section class="room-type">
+          <img class="room-type_image" src="..\assets\08-night.jpg" alt="" />
+          <article class="room-type_text">
+            <h3>Type 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
+            <button class="button">Book</button>
+          </article>
+        </section>
+      </div>
+    </article>
     <Footer />
   </section>
 </template>
@@ -80,6 +117,25 @@ export default {
     @include center;
     flex-flow: column wrap;
     justify-content: space-between;
+  }
+
+  .rooms-type {
+    margin-top: 12vh;
+    h2 {
+      text-align: center;
+    }
+
+    .room-type {
+      min-height: 23vh;
+
+      .room-type_image {
+        object-fit: cover;
+        flex-basis: 60%;
+      }
+      .room-type_text {
+        flex-basis: 40%;
+      }
+    }
   }
 }
 </style>
