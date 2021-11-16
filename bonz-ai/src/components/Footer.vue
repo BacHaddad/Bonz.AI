@@ -16,7 +16,7 @@ export default {
   overflow-x: hidden;
   @include center;
   background-color: $darkBrown;
-  height: 43vh;
+  min-height: 43vh;
   padding-left: 5vw;
   padding-right: 5vw;
 }

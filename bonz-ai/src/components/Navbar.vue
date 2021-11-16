@@ -23,10 +23,10 @@ export default {
 
 <style lang="scss">
 .navbar {
-  width: 100%;
+  max-width: 100vw;
   @include center;
   background-color: $greenBlue;
-  height: 15vh;
+  min-height: 15vh;
   padding-left: 5vw;
   padding-right: 5vw;
   border-bottom: 11px solid $neonBlue;
