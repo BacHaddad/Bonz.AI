@@ -12,7 +12,8 @@ export default {
 
 <style lang="scss">
 .footer {
-  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   @include center;
   background-color: $darkBrown;
   height: 43vh;

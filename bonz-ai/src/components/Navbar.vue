@@ -1,15 +1,23 @@
 <template>
   <nav class="navbar">
-    <router-link class="brand" to="/"> <img src="..\assets\logo.svg" alt="" /> </router-link>
+    <router-link v-on:click="goToHome" class="brand" to="/"> <img src="..\assets\logo.svg" alt="" /> </router-link>
     <router-link class="link" to="/"> About </router-link>
     <router-link class="link" to="/"> Stay </router-link>
-    <button class="button">Book</button>
+    <button v-on:click="goToBooking" class="button">Book</button>
   </nav>
 </template>
 
 <script>
 export default {
   name: 'Header',
+  methods: {
+    goToHome: function () {
+      this.$router.push('/');
+    },
+    goToBooking: function () {
+      this.$router.push('/booking');
+    },
+  },
 };
 </script>
 

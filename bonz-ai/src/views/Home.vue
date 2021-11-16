@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper">
+  <section>
     <Navbar />
     <header class="header">
       <article class="header-hero">
@@ -18,40 +18,40 @@
     </article>
     <article class="rooms-type">
       <h2>Select your stay</h2>
-      <div class="rooms">
-        <section class="room-type">
-          <img class="room-type_image" src="..\assets\01-night.jpg" alt="" />
-          <article class="room-type_text">
-            <h3>Type 1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
-            <button class="button">Book</button>
-          </article>
-        </section>
-        <section class="room-type">
-          <img class="room-type_image" src="..\assets\03-night.jpg" alt="" />
-          <article class="room-type_text">
-            <h3>Type 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
-            <button class="button">Book</button>
-          </article>
-        </section>
-        <section class="room-type">
-          <img class="room-type_image" src="..\assets\07-night.jpg" alt="" />
-          <article class="room-type_text">
-            <h3>Type 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
-            <button class="button">Book</button>
-          </article>
-        </section>
-        <section class="room-type">
-          <img class="room-type_image" src="..\assets\08-night.jpg" alt="" />
-          <article class="room-type_text">
-            <h3>Type 4</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos asperiores itaque a rem veniam ex mollitia esse.</p>
-            <button class="button">Book</button>
-          </article>
-        </section>
-      </div>
+
+      <section class="room-type">
+        <img class="room-type_image" src="..\assets\01-night.jpg" alt="" />
+        <article class="room-type_text">
+          <h3>Type 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.</p>
+          <button class="button">Book</button>
+        </article>
+      </section>
+      <section class="room-type">
+        <img class="room-type_image" src="..\assets\03-night.jpg" alt="" />
+        <article class="room-type_text">
+          <h3>Type 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.</p>
+          <button class="button">Book</button>
+        </article>
+      </section>
+      <section class="room-type">
+        <img class="room-type_image" src="..\assets\07-night.jpg" alt="" />
+        <article class="room-type_text">
+          <h3>Type 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.</p>
+          <button class="button">Book</button>
+        </article>
+      </section>
+      <section class="room-type">
+        <img class="room-type_image" src="..\assets\08-night.jpg" alt="" />
+        <article class="room-type_text">
+          <h3>Type 4</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.</p>
+
+          <button class="button">Book</button>
+        </article>
+      </section>
     </article>
     <Footer />
   </section>
@@ -72,67 +72,78 @@ export default {
 </script>
 
 <style lang="scss">
-.wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
+.header {
+  .header-hero {
+    position: relative;
 
-  .header {
-    .header-hero {
-      position: relative;
+    &_image {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      box-shadow: 0 4px 4px 0 $boxShadow;
+    }
 
-      &_image {
-        width: 100%;
-        height: 70vh;
-        object-fit: cover;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    &_content {
+      position: absolute;
+      top: 10vh;
+      left: 10vw;
+
+      h1 {
+        color: $greenBlue;
+        text-align: center;
+      }
+      p {
+        color: $white;
       }
 
-      &_content {
-        position: absolute;
-        top: 10vh;
-        left: 10vw;
-
-        h1 {
-          color: $greenBlue;
-          text-align: center;
-        }
-        p {
-          color: $white;
-        }
-
-        aside {
-          background-color: $neonBlue;
-          height: 4px;
-          transform: scale(1.2);
-          margin-top: 3vh;
-        }
+      aside {
+        background-color: $neonBlue;
+        height: 4px;
+        transform: scale(1.2);
+        margin-top: 3vh;
       }
     }
   }
+}
 
-  .about {
-    background-color: $lightGrey;
-    min-height: 70vh;
-    padding: 130px;
-    @include center;
-    flex-flow: column wrap;
+.about {
+  background-color: $lightGrey;
+  min-height: 70vh;
+  padding: 130px;
+  @include center;
+  flex-flow: column wrap;
+
+  p {
+    margin: 51px 0;
+  }
+}
+
+.rooms-type {
+  margin-top: 12vh;
+  @include layout-grid;
+  margin-bottom: 112px;
+
+  h2 {
+    text-align: center;
+    grid-column: auto / span 2;
+    margin-bottom: 50px;
   }
 
-  .rooms-type {
-    margin-top: 12vh;
-    h2 {
-      text-align: center;
+  .room-type {
+    min-height: 23vh;
+
+    .room-type_image {
+      object-fit: cover;
+      flex-basis: 60%;
+      box-shadow: 0 4px 4px 0 $boxShadow;
     }
-
-    .room-type {
-      min-height: 23vh;
-
-      .room-type_image {
-        object-fit: cover;
-        flex-basis: 60%;
+    .room-type_text {
+      flex-basis: 40%;
+      & > .button {
+        box-shadow: 0 4px 4px 0 $boxShadow;
       }
-      .room-type_text {
-        flex-basis: 40%;
+      p {
+        margin: 8% 0;
       }
     }
   }

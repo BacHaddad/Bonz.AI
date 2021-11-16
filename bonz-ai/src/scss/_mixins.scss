@@ -7,5 +7,6 @@
 @mixin layout-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 4rem;
+  padding: 0 5%;
 }
