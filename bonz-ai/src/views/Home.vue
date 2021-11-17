@@ -20,19 +20,11 @@
     <article class="rooms-type">
       <h2>Select your stay</h2>
 
-      <section class="room-type">
-        <div class="room-type_image"><img src="..\assets\01-night.jpg" alt="" /></div>
+      <section v-for="room in rooms" :key="room.type" class="room-type">
+        <div class="room-type_image"><img src="" alt="" /></div>
         <article class="room-type_text">
-          <h3>Type 1</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.</p>
-          <button class="button">Book</button>
-        </article>
-      </section>
-      <section class="room-type">
-        <div class="room-type_image"><img src="..\assets\01-night.jpg" alt="" /></div>
-        <article class="room-type_text">
-          <h3>Type 1</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.</p>
+          <h3>Type {{ room.type }}</h3>
+          <p>{{ room.description }}</p>
           <button class="button">Book</button>
         </article>
       </section>
@@ -51,6 +43,16 @@ export default {
   components: {
     Navbar,
     Footer,
+  },
+  data: function () {
+    return {
+      rooms: [
+        { type: 1, img: '../assets/01-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
+        { type: 2, img: '../assets/03-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
+        { type: 3, img: '../assets/07-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
+        { type: 4, img: '../assets/08-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
+      ],
+    };
   },
 };
 </script>

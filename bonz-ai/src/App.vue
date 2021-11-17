@@ -5,6 +5,13 @@
 </template>
 
 <style lang="scss">
+*,
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 #app {
   max-width: 1440px;
   margin: 0 auto;
