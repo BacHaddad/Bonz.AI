@@ -20,11 +20,35 @@
     <article class="rooms-type">
       <h2>Select your stay</h2>
 
-      <section v-for="room in rooms" :key="room.type" class="room-type">
-        <div class="room-type_image"><img src="" alt="" /></div>
+      <section class="room-type">
+        <div class="room-type_image"><img src="../assets/01-night.jpg" alt="" /></div>
         <article class="room-type_text">
-          <h3>Type {{ room.type }}</h3>
-          <p>{{ room.description }}</p>
+          <h3>Type 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, delectus.</p>
+          <button class="button">Book</button>
+        </article>
+      </section>
+      <section class="room-type">
+        <div class="room-type_image"><img src="../assets/03-night.jpg" alt="" /></div>
+        <article class="room-type_text">
+          <h3>Type 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, delectus.</p>
+          <button class="button">Book</button>
+        </article>
+      </section>
+      <section class="room-type">
+        <div class="room-type_image"><img src="../assets/07-night.jpg" alt="" /></div>
+        <article class="room-type_text">
+          <h3>Type 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, delectus.</p>
+          <button class="button">Book</button>
+        </article>
+      </section>
+      <section class="room-type">
+        <div class="room-type_image"><img src="../assets/08-night.jpg" alt="" /></div>
+        <article class="room-type_text">
+          <h3>Type 4</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, delectus.</p>
           <button class="button">Book</button>
         </article>
       </section>
@@ -43,16 +67,6 @@ export default {
   components: {
     Navbar,
     Footer,
-  },
-  data: function () {
-    return {
-      rooms: [
-        { type: 1, img: '../assets/01-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
-        { type: 2, img: '../assets/03-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
-        { type: 3, img: '../assets/07-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
-        { type: 4, img: '../assets/08-night.jpg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora officia eos.' },
-      ],
-    };
   },
 };
 </script>
@@ -115,23 +129,18 @@ export default {
     margin-bottom: 50px;
   }
 
-  // .room-type {
-  //   min-height: 23vh;
+  .room-type {
+    .room-type_text {
+      h3 {
+        font-weight: 900;
+      }
+    }
+  }
+}
 
-  //   .room-type_image {
-  //     object-fit: cover;
-  //     flex-basis: 60%;
-  //     box-shadow: 0 4px 4px 0 $boxShadow;
-  //   }
-  //   .room-type_text {
-  //     flex-basis: 40%;
-  //     & > .button {
-  //       box-shadow: 0 4px 4px 0 $boxShadow;
-  //     }
-  //     p {
-  //       margin: 8% 0;
-  //     }
-  //   }
-  // }
+@media screen and (max-width: 900px) {
+  .room-type {
+    grid-column: auto / span 2;
+  }
 }
 </style>

@@ -4,6 +4,7 @@
     <router-link class="link" to="/"> About </router-link>
     <router-link class="link" to="/"> Stay </router-link>
     <button v-on:click="goToBooking" class="button">Book</button>
+    <div class="hamburger">&#9776;</div>
   </nav>
 </template>
 
@@ -33,6 +34,21 @@ export default {
 
   & > .brand {
     margin-right: auto;
+  }
+  .hamburger {
+    display: none;
+    font-size: 3rem;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar > .button,
+  .link {
+    display: none;
+  }
+  .navbar > .hamburger {
+    display: inline-block;
   }
 }
 </style>
