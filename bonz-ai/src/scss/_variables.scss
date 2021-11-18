@@ -1,9 +1,20 @@
+// font size ---------------------------------
 $fontSizeRoom: 1.25rem;
 $fontSizeBtn: 1.5rem;
 $fontSizeCopyright: 1.375rem;
 $fontSizeLogo: 1.625rem;
 $fontSizeLinks: 1.5rem;
 $fontSizeHeroText: 3rem;
+
+// fonts size with media queries----------------
+$fontSizeP1: 1.6em;
+$fontSizeP2: 1.2em;
+$fontSizeOpyright: 1em;
+$fontSizeHeroText: 2em;
+$fontSizeH1bp2: 3em;
+$fontSizeH1bp3: 2em;
+
+// colors ------------------------------------------
 
 $white: #fff;
 $black: #000;
@@ -15,4 +26,11 @@ $darkBrown: #2b2319;
 $actionGreen: #0c251f;
 $boxShadow: rgba(0, 0, 0, 0.25);
 
+//  form -------------------------------------------
+
 $radius: 9px;
+
+// media queries break points ---------------------
+$breakPoint0: 1000px;
+$breakPoint1: 900px;
+$breakPoint2: 700px;

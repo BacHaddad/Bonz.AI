@@ -16,4 +16,10 @@ html {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: $breakPoint0) {
+  #app {
+    max-width: 100vw;
+  }
+}
 </style>

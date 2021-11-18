@@ -49,6 +49,7 @@ export default {
   }
   .navbar > .hamburger {
     display: inline-block;
+    cursor: pointer;
   }
 }
 </style>

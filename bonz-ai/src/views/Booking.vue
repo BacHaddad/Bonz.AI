@@ -4,29 +4,33 @@
     <section class="booking-info">
       <h2>Booking</h2>
       <article class="booking-info_details">
-        <div>
-          <p>Check-in dates</p>
-          <p>Dec 22</p>
+        <div class="dates">
+          <div>
+            <p><strong>Check-in dates</strong></p>
+            <p>Dec 22</p>
+          </div>
+          <img src="../assets/checkin-dates.svg" alt="" />
+          <div class="border"></div>
+          <div>
+            <p><strong>Check-out dates</strong></p>
+            <p>Dec 22</p>
+          </div>
+          <img src="../assets/checkin-dates.svg" alt="" />
+          <div class="border"></div>
         </div>
-        <img src="../assets/checkin-dates.svg" alt="" />
-        <div class="border"></div>
-        <div>
-          <p>Check-in dates</p>
-          <p>Dec 22</p>
+        <div class="guests">
+          <div>
+            <p><strong>Guests</strong></p>
+            <p>1 Guest</p>
+          </div>
+          <img src="../assets/guests.svg" alt="" />
+          <div class="border"></div>
+          <div>
+            <p><strong>no of Rooms</strong></p>
+            <p>1</p>
+          </div>
+          <img src="../assets/rooms.svg" alt="" />
         </div>
-        <img src="../assets/checkin-dates.svg" alt="" />
-        <div class="border"></div>
-        <div>
-          <p>Check-in dates</p>
-          <p>Dec 22</p>
-        </div>
-        <img src="../assets/guests.svg" alt="" />
-        <div class="border"></div>
-        <div>
-          <p>Check-in dates</p>
-          <p>Dec 22</p>
-        </div>
-        <img src="../assets/rooms.svg" alt="" />
       </article>
     </section>
     <hr />
@@ -152,16 +156,18 @@
     <hr />
     <article class="booking-review">
       <h2>Your Booking</h2>
-      <section>
+
+      <section class="booking-review__image">
+        <img src="../assets/07-night.jpg" alt="" />
+        <p><strong>Total 1100 SEK</strong></p>
+      </section>
+      <section class="booking-review__info">
         <p>Wed, Dec 22, 2021 - Sun, Dec 26, 2021</p>
         <p>1 Adult</p>
         <p>4 nights</p>
-        <p>Room Type 2</p>
+        <hr />
+        <p><strong>Room Type 2</strong></p>
         <p>Drone-delivered coffee included</p>
-      </section>
-      <section>
-        <img src="../assets/07-night.jpg" alt="" />
-        <p>Total 1100 SEK</p>
       </section>
       <button class="button">Complete your booking</button>
     </article>
@@ -183,24 +189,57 @@ export default {
 .booking-info {
   margin: 4rem 0;
   padding: 0 2rem;
+
   &_details {
     padding: 1em;
-    width: 100%;
-    p {
-      font-size: $fontSizeCopyright;
+
+    > .dates {
+      display: flex;
+      flex-basis: 50%;
+      justify-content: space-around;
+
+      > img {
+        width: 40px;
+        height: 40px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      div {
+        p {
+          font-size: 1rem;
+          margin: 0 0.5rem;
+          border-left: 1px solid $black;
+          padding-left: 0.3rem;
+        }
+      }
     }
-    > img {
-      width: 50px;
-      height: 50px;
-    }
-    > img:hover {
-      cursor: pointer;
+
+    > .guests {
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 50%;
+      > img {
+        width: 40px;
+        height: 40px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      div {
+        p {
+          font-size: 1rem;
+          margin: 0 0.7rem;
+          border-left: 1px solid $black;
+          padding-left: 0.3rem;
+        }
+      }
     }
   }
 }
 
 .room-booking {
-  height: 25rem;
+  min-height: 30rem;
   width: 100%;
   @include center;
   padding: 0 5vw;
@@ -253,8 +292,8 @@ export default {
 }
 
 .booking-review {
-  width: 62rem;
-  height: 48rem;
+  max-width: 75vw;
+  min-height: 82vh;
   background-color: $lightGrey;
   box-shadow: 0 4px 4px 0 $boxShadow;
   @include layout-grid;
@@ -268,7 +307,7 @@ export default {
     margin: 60px 0;
   }
   img {
-    width: 250px;
+    width: 100%;
     margin-bottom: 8%;
   }
   p {
@@ -279,6 +318,69 @@ export default {
     grid-column: auto / span 2;
     align-self: center;
     justify-self: center;
+  }
+}
+
+// media queries --------------------------------------------------------------------------------
+@media screen and (max-width: $breakPoint0) {
+  .booking-info {
+    &_details {
+      flex-direction: column;
+      > .dates {
+        flex-basis: 100%;
+        justify-content: space-between;
+        > img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      > .guests {
+        margin-top: 3rem;
+        justify-content: space-between;
+        flex-basis: 100%;
+        > img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .room-booking {
+    &__type {
+      margin-bottom: 1rem;
+    }
+    &__details {
+      & .input > p {
+        font-size: 1rem;
+      }
+      > p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .booking-review {
+    &__image {
+      grid-column: auto / span 2;
+    }
+    &__info {
+      grid-column: auto / span 2;
+    }
+    .button {
+      width: 100%;
+      border-radius: 0;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $breakPoint1) {
+  .room-booking {
+    flex-direction: column;
+    &__details {
+      align-self: flex-end;
+    }
   }
 }
 </style>

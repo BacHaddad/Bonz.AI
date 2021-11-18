@@ -58,7 +58,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 
@@ -141,6 +140,58 @@ export default {
 @media screen and (max-width: 900px) {
   .room-type {
     grid-column: auto / span 2;
+  }
+  .about {
+    padding: 100px;
+
+    > p {
+      font-size: $fontSizeP1;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    .header-hero {
+      position: relative;
+      &_image {
+        height: 70vh;
+      }
+      &_content {
+        h1 {
+          font-size: $fontSizeH1bp2;
+        }
+        p {
+          font-size: $fontSizeP1;
+        }
+        aside {
+          width: 100%;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 60px;
+    p {
+      font-size: $fontSizeP2;
+      margin: 50px 0;
+    }
+  }
+
+  .room-type {
+    flex-direction: column;
+    &_image {
+      margin-bottom: 2rem;
+    }
+
+    &_text {
+      > .button {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
   }
 }
 </style>
